@@ -1,3 +1,11 @@
+.main_top {
+  width: 100%;
+  height: 817px;
+  background-image: url("../public/hero.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
 .container {
   padding: 0 2rem;
 }
@@ -10,6 +18,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 1312px;
+  margin: auto;
 }
 
 .footer {
