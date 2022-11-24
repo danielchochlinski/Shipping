@@ -1,8 +1,10 @@
 .nav {
   display: flex;
   flex-direction: column;
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
+  max-width: 1440px;
 }
 
 .nav_top {
@@ -92,6 +94,12 @@
 @media screen and (max-width: 1049px) {
   .nav {
     .nav_top {
+      span {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+      }
     }
     .nav_bottom {
       .hamburger {
@@ -118,6 +126,18 @@
       }
       .nav_lang {
       }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav {
+    .nav_top {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      gap: 2px;
+      padding: 14px;
     }
   }
 }

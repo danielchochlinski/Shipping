@@ -1,0 +1,43 @@
+.memorials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  justify-content: center;
+  padding: 100px;
+
+  .memorial_box {
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 15px;
+    }
+    span:first-of-type {
+      border-top: 1px solid #1d2f52;
+      font-size: 32px;
+      line-height: 41px;
+      margin-top: auto;
+      margin-bottom: 5px;
+    }
+    span:nth-child(2) {
+      font-size: 24px;
+      line-height: 31px;
+    }
+
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 10px;
+    color: #1d2f52;
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .memorials {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    // height: 400px;
+  }
+}

@@ -1,0 +1,69 @@
+.about {
+  .about_text {
+    padding: 50px 100px;
+    h2 {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 47px;
+      color: #ffffff;
+    }
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  .about_pic {
+    display: flex;
+    justify-content: space-evenly;
+    height: 355px;
+    background-image: url("../../public/about.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      span:first-of-type {
+        font-weight: 600;
+        font-size: 52px;
+        line-height: 66px;
+      }
+      span:last-child {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about {
+    .about_text {
+      padding: 25px 25px;
+    }
+    .about_pic {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 0 8rem 0 0;
+
+      > div {
+        text-align: left;
+        span:first-of-type {
+          font-weight: 600;
+          font-size: 48px;
+          line-height: 40px;
+        }
+        span:last-child {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

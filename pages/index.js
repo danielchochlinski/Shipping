@@ -1,8 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+import About from "../views/about/About";
+import Add from "../views/add/Add";
 import Hero from "../views/hero/Hero";
+import Memorials from "../views/memorials/Memorials";
 import Nav from "../views/Nav/Nav";
+import Offer from "../views/offer/Offer";
 
 export default function Home() {
   return (
@@ -19,6 +23,10 @@ export default function Home() {
           <Nav />
           <Hero />
         </div>
+        <About />
+        <Offer />
+        <Add />
+        <Memorials />
       </main>
 
       <footer></footer>
