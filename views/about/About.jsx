@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./about.module.scss";
 const About = () => {
   return (
-    <div className={styles.about}>
-      <div class={styles.about_text}>
+    <div className={styles.about} name="about">
+      <div className={styles.about_text}>
         <h2>O Firmie</h2>
         <p>
           Spedycja i logistyka to branża, która wymaga planowania,

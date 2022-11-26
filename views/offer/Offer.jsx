@@ -4,7 +4,7 @@ import Image from "next/image";
 import Land from "../../public/land.png";
 const Offer = () => {
   return (
-    <div className={styles.offer}>
+    <div className={styles.offer} name="offer">
       <h2>Oferta</h2>
 
       <div className={styles.offer_box}>

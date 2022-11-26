@@ -3,6 +3,9 @@ import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import About from "../views/about/About";
 import Add from "../views/add/Add";
+import Contact from "../views/contact/Contact";
+import Email from "../views/email/Email";
+import Footer from "../views/footer/Footer";
 import Hero from "../views/hero/Hero";
 import Memorials from "../views/memorials/Memorials";
 import Nav from "../views/Nav/Nav";
@@ -27,6 +30,9 @@ export default function Home() {
         <Offer />
         <Add />
         <Memorials />
+        <Contact />
+        <Email />
+        <Footer />
       </main>
 
       <footer></footer>

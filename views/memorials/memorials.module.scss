@@ -32,12 +32,18 @@
     padding: 50px;
   }
 }
+@media screen and (max-width: 1050px) {
+  .memorials {
+    .memorial_box {
+      padding: 16px;
+    }
+  }
+}
 
 @media screen and (max-width: 767px) {
   .memorials {
     display: flex;
     flex-direction: column;
-    padding: 50px;
-    // height: 400px;
+    padding: 25px;
   }
 }

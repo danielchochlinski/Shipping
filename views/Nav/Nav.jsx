@@ -6,6 +6,7 @@ import logo from "../../public/logo.png";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-scroll";
 const navStyle = {
   opacity: "1",
   transition: "all 0.5s ease-in-out",
@@ -21,11 +22,15 @@ const iconStyle = {
 };
 const Nav = () => {
   const [nav, setNav] = useState(true);
+  console.log(nav);
   useEffect(() => {
+    window.innerWidth > 1050 ? setNav(true) : "";
+    window.innerWidth < 1050 ? setNav(false) : "";
     const changeWidth = () => {
-      // setScreenWidth(window.innerWidth);
-      window.innerWidth > 720 ? setNav(true) : setNav(false);
+      window.innerWidth > 1050 ? setNav(true) : "";
+      window.innerWidth < 1050 ? setNav(false) : "";
     };
+    console.log(window.innerWidth);
 
     window.addEventListener("resize", changeWidth);
 
@@ -44,7 +49,7 @@ const Nav = () => {
         <span>+48 793 766 538 +380965180838</span>
       </div>
 
-      <div class={styles.nav_bottom}>
+      <div className={styles.nav_bottom}>
         <div className={styles.logo}>
           <Image src={logo} width={150} height={100} alt="logo" />
         </div>
@@ -54,10 +59,42 @@ const Nav = () => {
             <MenuIcon sx={iconStyle} onClick={() => setNav(!nav)} />
           </div>
           <div className={styles.nav_links} style={nav ? navStyle : hideNav}>
-            <span>O Firmie</span>
-            <span>Oferta</span>
-            <span>Opinie</span>
-            <span>Kontakt</span>
+            <Link
+              to="about"
+              smooth={true}
+              spy={true}
+              duration={500}
+              offset={-150}
+            >
+              <span>O Firmie</span>
+            </Link>
+            <Link
+              to="offer"
+              smooth={true}
+              spy={true}
+              duration={500}
+              offset={-190}
+            >
+              <span>Oferta</span>
+            </Link>
+            <Link
+              to="memorials"
+              smooth={true}
+              spy={true}
+              duration={500}
+              offset={-150}
+            >
+              <span>Opinie</span>
+            </Link>
+            <Link
+              to="contact"
+              smooth={true}
+              spy={true}
+              duration={500}
+              offset={-150}
+            >
+              <span>Kontakt</span>
+            </Link>
           </div>
         </div>
 

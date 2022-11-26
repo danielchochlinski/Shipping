@@ -5,12 +5,15 @@
   top: 0;
   width: 100%;
   max-width: 1440px;
+  z-index: 9;
 }
 
 .nav_top {
   display: flex;
   justify-content: space-evenly;
   padding: 18px;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
   span {
     font-weight: 600;
     font-size: 20px;
@@ -41,6 +44,7 @@
     div:last-child {
       display: flex;
       gap: 4rem;
+      left: 0;
     }
 
     span {
@@ -116,6 +120,9 @@
         padding-bottom: 30px;
 
         div:last-child {
+          margin-top: 100px;
+          position: absolute;
+          width: 100%;
           padding: 35px 0 35px;
           z-index: 2;
           background: #ffffff;

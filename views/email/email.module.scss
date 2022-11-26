@@ -1,0 +1,135 @@
+.container {
+  padding: 30px 223px;
+  height: 280px;
+
+  .email {
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 30px;
+
+    input {
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid #ffffff;
+      border-radius: 10px;
+      width: 300px;
+      height: 50px;
+      padding: 0 0 0 15px;
+
+      &::placeholder {
+        color: #ffffff;
+      }
+    }
+    button {
+      background: none;
+      border: 1px solid #ffffff;
+      border-radius: 10px;
+      padding: 14px 26px;
+      margin-top: auto;
+      transition: 0.5s all;
+      //   width: 300px;
+      cursor: pointer;
+      &:hover {
+        background: #000000;
+      }
+    }
+    div:first-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 30px;
+
+      span {
+        margin: 10px 0 0 0;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+    div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 30px;
+      span {
+        margin: 10px 0 0 0;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+    div:nth-child(3) {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    padding: 30px 100px;
+
+    .email {
+      gap: 30px;
+
+      div:first-child {
+        span {
+          margin: 0;
+        }
+      }
+      div:nth-child(2) {
+        span {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .container {
+    padding: 30px 50px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .container {
+    height: 100%;
+    .email {
+      gap: 20px;
+      height: 100%;
+      flex-direction: column;
+      button {
+        width: 300px;
+      }
+
+      div:first-child {
+        gap: 10px;
+        span {
+          margin: 0;
+        }
+      }
+      div:nth-child(2) {
+        gap: 10px;
+        span {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    .email {
+      input {
+        width: 100%;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
