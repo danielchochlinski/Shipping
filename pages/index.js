@@ -22,7 +22,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className={styles.main_top}>
+        <div className={styles.main_top} name="top">
           <Nav />
           <Hero />
         </div>

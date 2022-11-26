@@ -51,7 +51,9 @@ const Nav = () => {
 
       <div className={styles.nav_bottom}>
         <div className={styles.logo}>
-          <Image src={logo} width={150} height={100} alt="logo" />
+          <Link to="top" smooth={true} spy={true} duration={500} offset={-110}>
+            <Image src={logo} width={150} height={100} alt="logo" />
+          </Link>
         </div>
 
         <div className={styles.nav_links_div}>
