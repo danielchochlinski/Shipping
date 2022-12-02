@@ -35,7 +35,7 @@ export default function Home() {
         <About />
         <Offer />
         <Add />
-        <Memorials />
+        {/* <Memorials /> */}
         <Contact />
         <Email />
         <Footer />
