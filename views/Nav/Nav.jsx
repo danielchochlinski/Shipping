@@ -113,13 +113,17 @@ const Nav = () => {
           <div>
             <select name="lan" id="lan" onChange={changeLanguage}>
               <option value="pl">pl</option>
-              <option value="rus">rs</option>
+              <option value="rus">ukr</option>
               <option value="en">en</option>
             </select>
           </div>
           <div>
-            <EmailIcon sx={iconStyle} fontSize="large" />
-            <LocalPhoneIcon sx={iconStyle} fontSize="large" />
+            <a href="mailto:logistics.krk.2022@gmail.com">
+              <EmailIcon sx={iconStyle} fontSize="large" />
+            </a>
+            <a href="tel:+48793766538">
+              <LocalPhoneIcon sx={iconStyle} fontSize="large" />
+            </a>
           </div>
         </div>
       </div>
