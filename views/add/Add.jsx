@@ -1,19 +1,24 @@
 import React from "react";
 import styles from "./add.module.scss";
+import pl from "./locales/pl";
+import en from "./locales/en";
+import rus from "./locales/rus";
+import { useRouter } from "next/router";
 
 const Add = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : locale === "pl" ? pl : rus;
+
   return (
     <div className={styles.add}>
       <div className={styles.add_top}>
-        <h2>Współpracując z nami otrzymasz</h2>
+        <h2>{t.h}</h2>
       </div>
       <div className={styles.add_bottom}>
         <div className={styles.add_box}>
-          <span> Szybka dostawa na cały swiat</span>
-          <span>
-            Jako lider w globalnej spedycji lotniczej, Transcomlogistics
-            przoduje w dostarczaniu dostosowanego transportu na całym świecie
-          </span>
+          <span>{t.h_one}</span>
+          <span>{t.p_one}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100"
@@ -37,11 +42,8 @@ const Add = () => {
           </svg>
         </div>
         <div className={styles.add_box}>
-          <span>Bezpieczna obsługa</span>
-          <span>
-            Jako lider w globalnej spedycji morskiej, Transcomlogistics przoduje
-            w dostarczaniu dostosowanego transportu morskiego
-          </span>
+          <span>{t.h_two}</span>
+          <span>{t.p_two}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100"
@@ -87,11 +89,8 @@ const Add = () => {
           </svg>
         </div>
         <div className={styles.add_box}>
-          <span>24/7 Obsługa klienta</span>
-          <span>
-            Jako lider w globalnej spedycji lotniczej, Transcomlogistics
-            przoduje w zapewnianiu indywidualnej obsługi klienta 24/7
-          </span>
+          <span>{t.h_three}</span>
+          <span>{t.p_three}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100"

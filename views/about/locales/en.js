@@ -1,0 +1,8 @@
+export default {
+  about: "About Us",
+  about_p:
+    "Forwarding and logistics is an industry that requires planning, meticulousness in the implementation and settlement of the transport process from the starting point to the destination. As a modern forwarding company, we are well aware that a business client does not want to deal with these processes on their own and counts on the fact that our services will not only be comprehensive, but also tailored to their needs, the route the shipment is to travel and the optimal delivery time. Progress and modern technological solutions allow us to meet these expectations. Currently, we are able to carry out orders on the premises of the company or the customer's warehouse, where we collect the goods. Thanks to this, companies that decide to cooperate with us only have to make the payment and sign the documentation. We are also well aware of the role of forwarding in the modern world. Currently, the exchange of goods takes place not only between companies in the country, but also between different countries, often very distant from each other. Knowing this, we offer various types of transport. Among them, we can mention, among others, air, sea and road transport. Like other courier companies, we make sure to use modern technologies, communication and transport techniques. Thanks to this, we shorten the delivery time of the shipment and ensure its maximum safety. So let's take a closer look at the transport services offered by Transcomlogistics.",
+  years: "years of experience",
+  amount: "monthly declarations",
+  shippments: "mil shipments a year",
+};

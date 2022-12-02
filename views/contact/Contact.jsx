@@ -1,21 +1,29 @@
 import React from "react";
 import styles from "./contact.module.scss";
+import pl from "./locales/pl";
+import en from "./locales/en";
+import rus from "./locales/rus";
+import { useRouter } from "next/router";
 const boldStyle = {
   fontWeight: "500",
   fontSize: "28px",
   lineHeight: "36px",
 };
 const Contact = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : locale === "pl" ? pl : rus;
+
   return (
     <div className={styles.contact} name="contact">
       <div className={styles.contact_info}>
-        <h4>Kontakt</h4>
+        <h4>{t.contact}</h4>
         <span>Ul.Galicyjska 1 biuro 51C 31-586, Kraków</span>
-        <span>Pn-Pt: 9:00 - 17:00</span>
-        <span style={boldStyle}>Numery telefonu: </span>
+        <span>{t.days}</span>
+        <span style={boldStyle}>{t.phone_number}</span>
         <span> +48 793 766 538</span>
         <span>+380965180838</span>
-        <span style={boldStyle}>Email:</span>
+        <span style={boldStyle}>{t.email}</span>
         <span> logistics.krk.2022@gmail.com</span>
       </div>
       <div className={styles.contact_map}>

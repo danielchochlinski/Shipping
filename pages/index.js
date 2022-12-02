@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import Router from "next/router";
+import { useEffect } from "react";
 import styles from "../styles/Home.module.scss";
 import About from "../views/about/About";
 import Add from "../views/add/Add";
@@ -12,6 +14,10 @@ import Nav from "../views/Nav/Nav";
 import Offer from "../views/offer/Offer";
 
 export default function Home() {
+  useEffect(() => {
+    const locale = "pl";
+    Router.push("/", "/", { locale });
+  }, []);
   return (
     <div>
       <Head>

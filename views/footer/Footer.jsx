@@ -1,15 +1,24 @@
 import React from "react";
 import styles from "./footer.module.scss";
 import { Link } from "react-scroll";
+import { useRouter } from "next/router";
+import Router from "next/router";
+
+import pl from "./locales/pl";
+import en from "./locales/en";
+import rus from "./locales/rus";
 const Footer = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : locale === "pl" ? pl : rus;
   return (
     <div className={styles.footer}>
       <div className={styles.footer_links}>
         <Link to="about" smooth={true} spy={true} duration={500} offset={-150}>
-          <span>O firmie</span>
+          <span>{t.about_us}</span>
         </Link>
         <Link to="offer" smooth={true} spy={true} duration={500} offset={-190}>
-          <span>Oferta</span>
+          <span>{t.offer}</span>
         </Link>
         <Link
           to="memorials"
@@ -18,7 +27,7 @@ const Footer = () => {
           duration={500}
           offset={-150}
         >
-          <span>Opinie</span>
+          <span>{t.memorials}</span>
         </Link>
         <Link
           to="contact"
@@ -27,7 +36,7 @@ const Footer = () => {
           duration={500}
           offset={-150}
         >
-          <span>Kontakt</span>
+          <span>{t.contact}</span>
         </Link>
       </div>
       <div className={styles.footer_img}>

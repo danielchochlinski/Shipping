@@ -1,0 +1,8 @@
+export default {
+  about: "O Firmie",
+  about_p:
+    "Spedycja i logistyka to branża, która wymaga planowania, skrupulatności w realizacji oraz rozliczaniu procesu przewozów z miejsca początkowego do docelowego. Jako nowoczesna firma spedycyjna, doskonale zdajemy sobie sprawę z tego, że klient biznesowy nie chce zajmować się tymi procesami samodzielnie i liczy na to, że nasze usługi będą nie tylko kompleksowe, ale również dopasowane do jego potrzeb, trasy, jaką ma przebyć przesyłka oraz optymalnego czasu dostawy. Postęp oraz nowoczesne rozwiązania technologiczne pozwalają wyjść naprzeciw tym oczekiwaniom. Obecnie jesteśmy w stanie realizować zlecenia na terenie firmy lub magazynku klienta, gdzie odbieramy towar. Dzięki temu przedsiębiorstwa, które decydują się na współpracę z nami, muszą jedynie dokonać płatności oraz podpisać dokumentację. Doskonale zdajemy sobie także sprawę z roli spedycji we współczesnym świecie. Obecnie wymiana towarowa odbywa się nie tylko pomiędzy firmami na terenie kraju, ale również pomiędzy różnymi państwami, nierzadko bardzo od siebie odległymi. Wiedząc o tym, oferujemy różne rodzaje transportu. Wśród nich wymienić możemy między innymi transport lotniczy, morski oraz drogowy. Podobnie jak inne firmy kurierskie dbamy o to, by wykorzystywać nowoczesne technologie, techniki komunikacji czy transportu. Dzięki temu skracamy czas doręczenia przesyłki oraz dbamy o jej maksymalne bezpieczeństwo. Przyjrzyjmy się więc nieco bliżej usługom transportowym oferowanym przez Transcomlogistics.",
+  years: "lata doswiadczenia",
+  amount: "deklaracje miesięcznie",
+  shippments: "mil wysyłek rocznie",
+};

@@ -3,19 +3,25 @@ import image from "../../public/hero.png";
 import styles from "./Hero.module.scss";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
-
+import { useRouter } from "next/router";
+import Router from "next/router";
+import pl from "./locales/pl";
+import en from "./locales/en";
+import rus from "./locales/rus";
 const Hero = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : locale === "pl" ? pl : rus;
+
   return (
     <div className={styles.hero}>
       <div className={styles.hero_header}>
-        <h1>
-          Twój osobisty ekspert <br /> w dostawie ładunków
-        </h1>
+        <h1>{t.header}</h1>
       </div>
 
       <div className={styles.hero_bottom}>
         <div className={styles.hero_social_media}>
-          <span>Media socjalne</span>
+          <span>{t.social_media}</span>
           <InstagramIcon fontSize="large" />
           <FacebookIcon fontSize="large" />
         </div>
@@ -38,8 +44,8 @@ const Hero = () => {
             </div>
 
             <div>
-              <span>Fracht</span>
-              <span>Drogowy</span>
+              <span>{t.feright}</span>
+              <span>{t.road}</span>
             </div>
           </div>
 
@@ -59,8 +65,8 @@ const Hero = () => {
               </svg>
             </div>
             <div>
-              <span>Fracht</span>
-              <span>Drogowy</span>
+              <span>{t.feright}</span>
+              <span>{t.air}</span>
             </div>
           </div>
 
@@ -87,8 +93,8 @@ const Hero = () => {
               </svg>
             </div>
             <div>
-              <span>Fracht</span>
-              <span>Drogowy</span>
+              <span>{t.feright}</span>
+              <span>{t.naval}</span>
             </div>
           </div>
         </div>

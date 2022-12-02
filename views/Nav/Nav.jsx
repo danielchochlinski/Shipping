@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FormControl, Select, MenuItem, InputLabel } from "@mui/material";
 import styles from "./nav.module.scss";
 import Image from "next/image";
 import logo from "../../public/logo.png";
@@ -7,6 +6,12 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-scroll";
+import { useRouter } from "next/router";
+import Router from "next/router";
+
+import pl from "./locales/pl";
+import en from "./locales/en";
+import rus from "./locales/rus";
 const navStyle = {
   opacity: "1",
   transition: "all 0.5s ease-in-out",
@@ -21,8 +26,11 @@ const iconStyle = {
   //   height: "50px",
 };
 const Nav = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : locale === "pl" ? pl : rus;
   const [nav, setNav] = useState(true);
-  console.log(nav);
+
   useEffect(() => {
     window.innerWidth > 1050 ? setNav(true) : "";
     window.innerWidth < 1050 ? setNav(false) : "";
@@ -30,7 +38,6 @@ const Nav = () => {
       window.innerWidth > 1050 ? setNav(true) : "";
       window.innerWidth < 1050 ? setNav(false) : "";
     };
-    console.log(window.innerWidth);
 
     window.addEventListener("resize", changeWidth);
 
@@ -38,14 +45,16 @@ const Nav = () => {
       window.removeEventListener("resize", changeWidth);
     };
   }, []);
-  // const toggleNav = () => {
-  //   setNav(!nav);
-  // };
+
+  const changeLanguage = (e) => {
+    const locale = e.target.value;
+    Router.push("/", "/", { locale });
+  };
   return (
     <div className={styles.nav}>
       <div className={styles.nav_top}>
         <span>Ul.Galicyjska 1 biuro 51C, 31-586 Kraków</span>
-        <span>Email: logistics.krk.2022@gmail.com</span>
+        <span>{t.email}</span>
         <span>+48 793 766 538 +380965180838</span>
       </div>
 
@@ -68,7 +77,7 @@ const Nav = () => {
               duration={500}
               offset={-150}
             >
-              <span>O Firmie</span>
+              <span>{t.about_us}</span>
             </Link>
             <Link
               to="offer"
@@ -77,7 +86,7 @@ const Nav = () => {
               duration={500}
               offset={-190}
             >
-              <span>Oferta</span>
+              <span>{t.offer}</span>
             </Link>
             <Link
               to="memorials"
@@ -86,7 +95,7 @@ const Nav = () => {
               duration={500}
               offset={-150}
             >
-              <span>Opinie</span>
+              <span>{t.memorials}</span>
             </Link>
             <Link
               to="contact"
@@ -95,17 +104,17 @@ const Nav = () => {
               duration={500}
               offset={-150}
             >
-              <span>Kontakt</span>
+              <span>{t.contact}</span>
             </Link>
           </div>
         </div>
 
         <div className={styles.nav_lang}>
           <div>
-            <select name="lan" id="lan">
-              <option value="PL">PL</option>
-              <option value="RUS">RUS</option>
-              <option value="ENG">ENG</option>
+            <select name="lan" id="lan" onChange={changeLanguage}>
+              <option value="pl">pl</option>
+              <option value="rus">rs</option>
+              <option value="en">en</option>
             </select>
           </div>
           <div>
