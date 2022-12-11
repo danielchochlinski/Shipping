@@ -1,5 +1,5 @@
 export default {
-  header: "Your ransportation expert",
+  header: "Your transportation expert",
   social_media: "Social media",
   feright: "Freight",
   road: "Road",

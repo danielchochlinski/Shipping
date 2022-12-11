@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./nav.module.scss";
 import Image from "next/image";
-import logo from "../../public/logo.png";
+import logo from "../../../public/logo.png";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -112,9 +112,9 @@ const Nav = () => {
         <div className={styles.nav_lang}>
           <div>
             <select name="lan" id="lan" onChange={changeLanguage}>
-              <option value="pl">pl</option>
-              <option value="rus">ukr</option>
-              <option value="en">en</option>
+              <option value="pl">PL</option>
+              <option value="rus">UKR</option>
+              <option value="en">EN</option>
             </select>
           </div>
           <div>

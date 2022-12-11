@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "./offer.module.scss";
 import Image from "next/image";
-import Land from "../../public/land.png";
+import Land from "../../../public/land.png";
 import { useRouter } from "next/router";
 
 import pl from "./locales/pl";

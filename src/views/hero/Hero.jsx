@@ -1,10 +1,9 @@
 import React from "react";
-import image from "../../public/hero.png";
+import image from "../../../public/hero.png";
 import styles from "./Hero.module.scss";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { useRouter } from "next/router";
-import Router from "next/router";
 import pl from "./locales/pl";
 import en from "./locales/en";
 import rus from "./locales/rus";

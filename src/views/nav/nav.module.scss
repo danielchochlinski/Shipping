@@ -6,6 +6,15 @@
   width: 100%;
   max-width: 1440px;
   z-index: 9;
+  a {
+    cursor: pointer;
+  }
+  select {
+    cursor: pointer;
+  }
+  option {
+    cursor: pointer;
+  }
 }
 
 .nav_top {
@@ -32,7 +41,6 @@
   padding: 0 30px;
   position: relative;
   overflow: auto;
-
 
   .logo {
     display: flex;
