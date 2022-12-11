@@ -47,14 +47,14 @@ const Email = () => {
           <span>{t.question}</span>
           <input
             placeholder={t.name}
-            onChange={() => setFullName(e.target.value)}
+            onChange={(e) => setFullName(e.target.value)}
           />
         </div>
         <div>
           <span>{t.answer}</span>
           <input
             placeholder={t.phone}
-            onChange={() => setInfo(e.target.value)}
+            onChange={(e) => setInfo(e.target.value)}
           />
         </div>
         <div>
