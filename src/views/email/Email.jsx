@@ -32,6 +32,7 @@ const Email = () => {
         method: "POST",
         body: JSON.stringify(data),
       });
+      console.log(response);
       //implement notifications
     } catch (error) {
       console.log(error.message);
