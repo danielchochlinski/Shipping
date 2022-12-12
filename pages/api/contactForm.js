@@ -17,7 +17,7 @@ export default async (req, res) => {
 
     const data = {
       to: "logistics.krk.2022@gmail.com",
-      from: "gabinet@emgneurologmalopolska.com",
+      from: "office@logistics.krk.2022@gmail.com",
       subject: "TRANSCOMLOGISTICS Message",
       test: message,
       html: message,
