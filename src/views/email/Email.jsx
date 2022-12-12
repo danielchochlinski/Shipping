@@ -16,9 +16,8 @@ const Email = () => {
   const router = useRouter();
   const { locale } = router;
   console.log(fullName, info);
-  
+
   const t = locale === "en" ? en : locale === "pl" ? pl : rus;
-  const isNotValid = 
   const sendEmailHandler = async (e) => {
     e.preventDefault();
 
@@ -41,8 +40,8 @@ const Email = () => {
           type: "SUCCESS",
           message: "Message Sent!",
         });
-        setFullName("")
-        setInfo("")
+        setFullName("");
+        setInfo("");
       } else
         dispatch({
           id: uniqueID(),
