@@ -3,7 +3,7 @@ import React, { useState, useContext } from "react";
 import styles from "./email.module.scss";
 import { useRouter } from "next/router";
 import Router from "next/router";
-import { useNotification, uniqueID } from "../../../store/notification-context";
+import { useNotification, uniqueID } from "../../../store/NotificationProvider";
 
 import pl from "./locales/pl";
 import en from "./locales/en";
@@ -12,7 +12,7 @@ import rus from "./locales/rus";
 const Email = () => {
   const [fullName, setFullName] = useState();
   const [info, setInfo] = useState();
-
+  const dispatch = useNotification();
   const router = useRouter();
   const { locale } = router;
   console.log(fullName, info);
@@ -33,7 +33,18 @@ const Email = () => {
         body: JSON.stringify(data),
       });
       console.log(response);
-      //implement notifications
+      if (response.status === 200) {
+        dispatch({
+          id: uniqueID(),
+          type: "SUCCESS",
+          message: "Message Sent!",
+        });
+      } else
+        dispatch({
+          id: uniqueID(),
+          type: "ERROR",
+          message: "UPS Something Went Wrong",
+        });
     } catch (error) {
       console.log(error.message);
     }

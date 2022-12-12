@@ -12,7 +12,7 @@ import Hero from "../src/views/hero/Hero";
 import Memorials from "../src/views/memorials/Memorials";
 import Nav from "../src/views/nav/Nav";
 import Offer from "../src/views/offer/Offer";
-import NotificationProvider from "../store/notification-context";
+import NotificationProvider from "../store/NotificationProvider";
 
 export default function Home() {
   useEffect(() => {
