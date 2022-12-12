@@ -10,10 +10,8 @@ export default async (req, res) => {
     const body = JSON.parse(req.body);
     console.log(body);
     const message = `
-    Name: ${body.fullName}<br/>
-    Email: ${body.emailAddress}<br/>
-    PhoneNumber: ${body.phoneNumber}<br/>
-    Message: ${body.message}<br/>`;
+    Full Name: ${body.fullName}<br/>
+    Info: ${body.info}<br/>`;
 
     const data = {
       to: "logistics.krk.2022@gmail.com",
