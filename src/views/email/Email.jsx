@@ -19,9 +19,6 @@ const Email = () => {
   const t = locale === "en" ? en : locale === "pl" ? pl : rus;
   const sendEmailHandler = async (e) => {
     e.preventDefault();
-    if (!formIsValid) {
-      return;
-    }
 
     let data = {
       fullName: fullName,
