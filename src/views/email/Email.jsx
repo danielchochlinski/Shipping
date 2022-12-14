@@ -63,6 +63,8 @@ const Email = () => {
     } catch (error) {
       console.log(error.message);
     }
+    setFullName("");
+    setInfo("");
   };
   return (
     <div className={styles.container}>
