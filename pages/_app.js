@@ -4,7 +4,7 @@ import NotificationProvider from "../store/NotificationProvider";
 function MyApp({ Component, pageProps }) {
   return (
     <NotificationProvider>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </NotificationProvider>
   );
 }

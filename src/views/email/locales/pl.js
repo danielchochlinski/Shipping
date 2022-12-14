@@ -3,5 +3,6 @@ export default {
   answer: "Skontaktuj się z nami.",
   name: "Imie Nazwisko",
   phone: "Telefon/Email",
-  send: "Wyślij"
+  send: "Wyślij",
+  error: "Imię i infrmacje muszą mieć conajmiej 5 charakterów",
 };

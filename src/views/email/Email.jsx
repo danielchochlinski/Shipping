@@ -10,17 +10,29 @@ import en from "./locales/en";
 import rus from "./locales/rus";
 
 const Email = () => {
-  const [fullName, setFullName] = useState();
-  const [info, setInfo] = useState();
+  const [fullName, setFullName] = useState("");
+  const [info, setInfo] = useState("");
   const dispatch = useNotification();
+
   const router = useRouter();
   const { locale } = router;
   console.log(fullName, info);
+  let disable;
+  if (fullName.length <= 6 || info.length <= 6) {
+    disable = true;
+  }
 
   const t = locale === "en" ? en : locale === "pl" ? pl : rus;
   const sendEmailHandler = async (e) => {
     e.preventDefault();
-
+    if (disable) {
+      dispatch({
+        id: uniqueID(),
+        type: "ERROR",
+        message: t.error,
+      });
+      return;
+    }
     let data = {
       fullName: fullName,
       info: info,
