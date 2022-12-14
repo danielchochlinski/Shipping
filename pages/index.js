@@ -27,6 +27,10 @@ export default function Home() {
         <meta name="description" content="Transportation company" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="google-site-verification"
+          content="fZn0BmjbvLY_LyBoGkUxz3FWtNeNqX_P9XnlifdRoqI"
+        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
