@@ -46,6 +46,7 @@ const Email = () => {
         body: JSON.stringify(data),
       });
       console.log(response);
+
       if (response.status === 200) {
         dispatch({
           id: uniqueID(),
@@ -63,8 +64,6 @@ const Email = () => {
     } catch (error) {
       console.log(error.message);
     }
-    setFullName("");
-    setInfo("");
   };
   return (
     <div className={styles.container}>
@@ -73,12 +72,14 @@ const Email = () => {
           <span>{t.question}</span>
           <input
             placeholder={t.name}
+            value={fullName}
             onChange={(e) => setFullName(e.target.value)}
           />
         </div>
         <div>
           <span>{t.answer}</span>
           <input
+            value={info}
             placeholder={t.phone}
             onChange={(e) => setInfo(e.target.value)}
           />
