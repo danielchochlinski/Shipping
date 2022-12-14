@@ -18,7 +18,7 @@ const Email = () => {
   const { locale } = router;
   console.log(fullName, info);
   let disable;
-  if (fullName.length <= 6 || info.length <= 6) {
+  if (fullName.length <= 4 || info.length <= 4) {
     disable = true;
   }
 
