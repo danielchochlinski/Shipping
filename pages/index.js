@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Router from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.scss";
 import About from "../src/views/about/About";
 import Add from "../src/views/add/Add";
@@ -12,15 +12,15 @@ import Hero from "../src/views/hero/Hero";
 import Memorials from "../src/views/memorials/Memorials";
 import Nav from "../src/views/nav/Nav";
 import Offer from "../src/views/offer/Offer";
-import NotificationProvider from "../store/NotificationProvider";
+import Ups from "../src/views/ups/Ups";
 
 export default function Home() {
   useEffect(() => {
     const locale = "pl";
     Router.push("/", "/", { locale });
   }, []);
+  const [down, setDown] = useState(true);
   return (
-    // <NotificationProvider>
     <div>
       <Head>
         <title>Transcomlogistics</title>
@@ -55,19 +55,24 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className={styles.main_top} name="top">
-          <Nav />
-          <Hero />
-        </div>
-        <About />
-        <Offer />
-        <Add />
-        <Memorials />
-        <Contact />
-        <Email />
-        <Footer />
+        {!down ? (
+          <>
+            <div className={styles.main_top} name="top">
+              <Nav />
+              <Hero />
+            </div>
+            <About />
+            <Offer />
+            <Add />
+            <Memorials />
+            <Contact />
+            <Email />
+            <Footer />
+          </>
+        ) : (
+          <Ups />
+        )}
       </main>
     </div>
-    // </NotificationProvider>
   );
 }
