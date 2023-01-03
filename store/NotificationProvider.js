@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useReducer, Dispatch } from "react";
 import Notification from "./Notification";
 
-
 const int = {};
 const NotificationContext = createContext();
 
