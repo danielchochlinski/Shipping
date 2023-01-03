@@ -19,7 +19,7 @@ export default function Home() {
     const locale = "pl";
     Router.push("/", "/", { locale });
   }, []);
-  const [down, setDown] = useState(true);
+  const [down, setDown] = useState(false);
   return (
     <div>
       <Head>
