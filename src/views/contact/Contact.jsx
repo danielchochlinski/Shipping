@@ -18,7 +18,7 @@ const Contact = () => {
     <div className={styles.contact} name="contact">
       <div className={styles.contact_info}>
         <h4>{t.contact}</h4>
-        <span>Ul.Galicyjska 1 biuro 51C 31-586, Kraków</span>
+        <span>Ul.Bociana 22A lok. L1, Kraków</span>
         <span>{t.days}</span>
         <span style={boldStyle}>{t.phone_number}</span>
         <span> +48 793 766 538</span>

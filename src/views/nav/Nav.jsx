@@ -53,7 +53,7 @@ const Nav = () => {
   return (
     <div className={styles.nav}>
       <div className={styles.nav_top}>
-        <span>Ul.Galicyjska 1 biuro 51C, 31-586 Kraków</span>
+        <span>Ul.Bociana 22A lok. L1, Kraków</span>
         <span>{t.email}</span>
         <span>+48 793 766 538 +380965180838</span>
       </div>
@@ -70,40 +70,16 @@ const Nav = () => {
             <MenuIcon sx={iconStyle} onClick={() => setNav(!nav)} />
           </div>
           <div className={styles.nav_links} style={nav ? navStyle : hideNav}>
-            <Link
-              to="about"
-              smooth={true}
-              spy={true}
-              duration={500}
-              offset={-150}
-            >
+            <Link to="about" smooth={true} spy={true} duration={500} offset={-150}>
               <span>{t.about_us}</span>
             </Link>
-            <Link
-              to="offer"
-              smooth={true}
-              spy={true}
-              duration={500}
-              offset={-190}
-            >
+            <Link to="offer" smooth={true} spy={true} duration={500} offset={-190}>
               <span>{t.offer}</span>
             </Link>
-            <Link
-              to="memorials"
-              smooth={true}
-              spy={true}
-              duration={500}
-              offset={-150}
-            >
+            <Link to="memorials" smooth={true} spy={true} duration={500} offset={-150}>
               <span>{t.memorials}</span>
             </Link>
-            <Link
-              to="contact"
-              smooth={true}
-              spy={true}
-              duration={500}
-              offset={-150}
-            >
+            <Link to="contact" smooth={true} spy={true} duration={500} offset={-150}>
               <span>{t.contact}</span>
             </Link>
           </div>
